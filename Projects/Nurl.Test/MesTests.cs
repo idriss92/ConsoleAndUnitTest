@@ -18,6 +18,8 @@ namespace Nurl.Test
             //var 
             ////given
             //var command = null; //votre implémentation
+            var coso = new Commander();
+            //cons
 
             ////when
             //var result = command.Show(url); //exemple d'implémentation
