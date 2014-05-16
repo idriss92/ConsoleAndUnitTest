@@ -1,0 +1,5 @@
+C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl\bin\Debug\Nurl.exe.config
+C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl\bin\Debug\Nurl.exe
+C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl\bin\Debug\Nurl.pdb
+C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl\obj\Debug\Nurl.exe
+C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl\obj\Debug\Nurl.pdb
