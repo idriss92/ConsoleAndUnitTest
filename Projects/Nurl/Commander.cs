@@ -5,14 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Diagnostics;
+using System.IO;
 
 namespace Nurl
 {
-    public class Commander:ICommander
+    public class Commander : ICommander
     {
+        Verification verifie = new Verification();
+
         public void AfficherAide()
         {
-            Console.WriteLine("Exemple d'utilisation");
             Console.WriteLine("Utilisez l'application de la manière suivante :");
             Console.WriteLine("nurl.exe get -url 'http://abc'");
             Console.WriteLine("nurl.exe get -url 'http://abc' -save 'c:\abc.json'");
@@ -25,19 +27,22 @@ namespace Nurl
         /// afficher dans  la console le contenu du fichier situé à l'url abc
         /// nurl.exe get -url "http://abc"
         /// </summary>
-        /// <param name="arg"></param>
+        /// <param name="arg">string [] args</param>
         /// <returns></returns>
         public void Get(string[] args)
         {
-            //string action = args[0];
             if (!String.IsNullOrEmpty(args[0]))
             {
-                //IArgument iarg = new Argument();
-                //iarg.AddArgumentCouple(args[0], args[1]);
+                IArgument iarg = new Argument();
+                iarg.AddArgumentCouple(args[0], args[1]);
+
+                IArgument iarg2 = new Argument();
+                iarg2.AddArgumentCouple(args[1], args[2]);
+
 
                 using (WebClient client = new WebClient())
                 {
-                    string codeHtml = client.DownloadString(Normalisation(args[2]));
+                    string codeHtml = client.DownloadString(verifie.Normalisation(args[2]));
                     Console.WriteLine(codeHtml);
                 }
             }
@@ -48,21 +53,38 @@ namespace Nurl
         /// Sauvegarde le contenu de l'url http://abc dans le fichier c:\abc.json:
         /// nurl.exe get -url "http://abc" -save "c:\abc.json"
         /// </summary>
-        /// <param name="arg"></param>
+        /// <param name="arg">string[] sargs</param>
         /// <returns></returns>
 
         public void GetSave(string[] args)
         {
-            if(!String.IsNullOrEmpty(args[0]))
+            if (!String.IsNullOrEmpty(args[0]))
             {
-                using(WebClient client = new WebClient())
+                IArgument iarg = new Argument();
+                //
+                
+                iarg.AddArgumentCouple(args[0], args[1]);
+
+                IArgument iarg1 = new Argument();
+                iarg1.AddArgumentCouple(args[1], args[2]);
+
+                IArgument iarg2 = new Argument();
+                iarg2.AddArgumentCouple(args[3], args[4]);
+
+                //flag
+                bool etat = false;
+                //vérification existence de chemin
+                if (!etat == verifie.IsDirectory(args[4]))
                 {
-                    //string a = 
-                    client.DownloadFile(Normalisation(args[2]),Normalisation(args[4]));
+                    using (WebClient client = new WebClient())
+                    {
+                        //string a = 
+                        client.DownloadFile(verifie.Normalisation(args[2]), verifie.Normalisation(args[4]));
+                    }
                 }
             }
         }
-        
+
         /// <summary>
         /// Teste le temps de chargement du ficher à l'url http://abc 5 fois et affiche les 5 temp
         /// nurl.exe test -url "http://abc" -times 5
@@ -75,14 +97,20 @@ namespace Nurl
             Stopwatch sw = new Stopwatch();
             if (!String.IsNullOrEmpty(args[0]))
             {
+                IArgument arg = new Argument();
+                IArgument arg1 = new Argument();
+                IArgument arg2 = new Argument();
+                arg.AddArgumentCouple(args[0], args[1]);
+                arg1.AddArgumentCouple(args[1], args[2]);
+                arg2.AddArgumentCouple(args[3], args[4]);
+
                 for (int i = 0; i <= int.Parse(args[4]); i++)
                 {
                     sw.Reset();
                     sw.Start();
-                    //Get(args);
                     using (WebClient client = new WebClient())
                     {
-                        string codeHtml = client.DownloadString(Normalisation(args[2]));
+                        string codeHtml = client.DownloadString(verifie.Normalisation(args[2]));
                         Console.WriteLine(codeHtml);
                     }
                     sw.Stop();
@@ -99,38 +127,41 @@ namespace Nurl
         /// <returns></returns> 
         public void LoadTimeAverage(string[] args)
         {
+            IArgument arg = new Argument();
+            IArgument arg1 = new Argument();
+            IArgument arg2 = new Argument();
+            arg.AddArgumentCouple(args[0], args[1]);
+            arg1.AddArgumentCouple(args[1], args[2]);
+            arg2.AddArgumentCouple(args[4], args[5]);
+
             Stopwatch sw = new Stopwatch();
             long mesure = 0;
             long avg = 0;
+            bool etat = false;
+
+            
 
             if (!String.IsNullOrEmpty(args[0]))
             {
-                for (int i = 0; i <= int.Parse(args[4]); i++)
+                if (!etat == verifie.isUrL(args[2]))
                 {
-                    sw.Reset();
-                    sw.Start();
-                    using (WebClient client = new WebClient())
+                    for (int i = 0; i <= int.Parse(args[4]); i++)
                     {
-                        string codeHtml = client.DownloadString(Normalisation(args[2]));
+                        sw.Reset();
+                        sw.Start();
+                        using (WebClient client = new WebClient())
+                        {
+                            string codeHtml = client.DownloadString(verifie.Normalisation(args[2]));
+                        }
+                        sw.Stop();
+
+                        mesure += sw.ElapsedMilliseconds;
+                        Console.WriteLine(sw.ElapsedMilliseconds);
+                        avg = mesure / int.Parse(args[4]);
                     }
-                    sw.Stop();
-
-                    mesure += sw.ElapsedMilliseconds;
-                    Console.WriteLine(sw.ElapsedMilliseconds);
-                    avg = mesure / int.Parse(args[4]);
                 }
-                Console.WriteLine("Le temps moyen de chargement du fichier situé à "+args[2].ToString()+" est "+avg);
+                Console.WriteLine("Le temps moyen de chargement du fichier situé à " + args[2].ToString() + " est " + avg);
             }
-        }
-
-        ///<summary>
-        ///Methode qui prend un string avec des cotes et enleve les codes
-        ///</summary>
-        ///<param name="arg></param>
-        ///<returns></returns>
-        public string Normalisation(string url)
-        {
-            return url.Trim(new Char[] {'"'});
         }
 
     }

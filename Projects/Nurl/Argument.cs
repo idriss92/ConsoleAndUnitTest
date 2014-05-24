@@ -9,6 +9,11 @@ namespace Nurl
     public class Argument:IArgument
     {
         public Dictionary<string, string> values;
+       
+        public Argument()
+        {
+            values = new Dictionary<string, string>();
+        }
 
         public void AddArgumentCouple(string key, string value)
         {
@@ -19,7 +24,8 @@ namespace Nurl
 
         public string GetKey(string value)
         {
-            return values.FirstOrDefault(k =>k.Value == value).Key;
+            return values.First(k =>k.Value == value).Key;
+
         }
 
         public string GetValue(string key)

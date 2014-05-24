@@ -1,0 +1,9 @@
+C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl.Test1\bin\Debug\Nurl.Test1.dll
+C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl.Test1\bin\Debug\Nurl.Test1.pdb
+C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl.Test1\obj\Debug\Nurl.Test1.csprojResolveAssemblyReference.cache
+C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl.Test1\obj\Debug\Nurl.Test1.dll
+C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl.Test1\obj\Debug\Nurl.Test1.pdb
+C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl.Test1\bin\Debug\nunit.framework.dll
+C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl.Test1\bin\Debug\Nurl.exe
+C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl.Test1\bin\Debug\Nurl.pdb
+C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl.Test1\bin\Debug\nunit.framework.xml

@@ -12,6 +12,5 @@ namespace Nurl
         void GetSave(string[] args);
         void LoadTime(string[] args);
         void LoadTimeAverage(string[] args);
-        string Normalisation(string args);
     }
 }
