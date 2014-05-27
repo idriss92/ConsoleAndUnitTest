@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Nurl.exe" size="8704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Nurl.exe" size="9216">
       <assemblyIdentity name="Nurl" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aDoZ5KJ+NyAZAtt0hwnLG67pbkNulMiAmLbDb3QCTFI=</dsig:DigestValue>
+        <dsig:DigestValue>a/FaXrhDioJLsXDKjvJ1c+a33YJ7aT9aGX4Y3hY9d2A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -58,5 +58,10 @@ namespace Nurl
             }
             return true;
         }
+
+        //public void Replace (string chemin)
+        //{
+        //    chemin.Replace("\"", "/");
+        //}
     }
 }

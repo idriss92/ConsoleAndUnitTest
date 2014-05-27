@@ -8,9 +8,10 @@ namespace Nurl
 {
     public interface ICommander
     {
-        void Get(string[] args);
+        string Get(string[] args);
         void GetSave(string[] args);
         void LoadTime(string[] args);
         void LoadTimeAverage(string[] args);
+        
     }
 }

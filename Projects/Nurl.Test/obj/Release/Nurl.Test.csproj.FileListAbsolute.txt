@@ -1,7 +1,0 @@
-C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl.Test\bin\Release\Nurl.Test.dll
-C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl.Test\bin\Release\Nurl.Test.pdb
-C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl.Test\bin\Release\nunit.framework.dll
-C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl.Test\bin\Release\nunit.framework.xml
-C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl.Test\obj\Release\Nurl.Test.csprojResolveAssemblyReference.cache
-C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl.Test\obj\Release\Nurl.Test.dll
-C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl.Test\obj\Release\Nurl.Test.pdb

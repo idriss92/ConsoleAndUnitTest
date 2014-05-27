@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nurl", "Nurl.csproj", "{8351E617-DB82-4878-BB18-46A59065E3F2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nurl.Test", "..\Nurl.Test\Nurl.Test.csproj", "{BC03FBB2-42B3-4CFB-916F-DE4E6A3CF82E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C1C22BE0-A97F-406B-BC3C-E2242F942028}"
 	ProjectSection(SolutionItems) = preProject
@@ -22,10 +22,6 @@ Global
 		{8351E617-DB82-4878-BB18-46A59065E3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8351E617-DB82-4878-BB18-46A59065E3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8351E617-DB82-4878-BB18-46A59065E3F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC03FBB2-42B3-4CFB-916F-DE4E6A3CF82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC03FBB2-42B3-4CFB-916F-DE4E6A3CF82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC03FBB2-42B3-4CFB-916F-DE4E6A3CF82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC03FBB2-42B3-4CFB-916F-DE4E6A3CF82E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C4420906-84ED-4D69-BC6D-F52C503A4D23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C4420906-84ED-4D69-BC6D-F52C503A4D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4420906-84ED-4D69-BC6D-F52C503A4D23}.Release|Any CPU.ActiveCfg = Release|Any CPU

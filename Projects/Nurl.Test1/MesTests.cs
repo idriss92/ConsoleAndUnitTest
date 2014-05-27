@@ -1,6 +1,7 @@
 ﻿using System;
 using Nurl;
 using NUnit.Framework;
+using System.IO;
 //using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Nurl.Test1
@@ -8,30 +9,27 @@ namespace Nurl.Test1
     [TestFixture]
     public class MesTests
     {
-        
+        string[] args = Environment.GetCommandLineArgs();
+
+
+        #region Test Commander Done
         [Test]
+        //[TestCase("nurl.exe get -url 'http://api.openweathermap.org/data/2.5/weather?q=paris&units=metric'")]
         public void Should_show_the_content_of_a_page()
         {
-            //var 
-            ////given
-            //var command = null; //votre implémentation
-            //var coso = new Commander();
-            //var contenu = coso.Get();
-
-            //cons
-
-            ////when
-            //var result = command.Show(url); //exemple d'implémentation
-
-            ////then
-
-            //Assert.That(result, Is.EqualTo("<h1>hello</h1>"));
+            var contenu = new Commander();
+            var recu = contenu.Get(args);
+            Assert.IsNotNull(recu);
         }
 
-
+        #endregion
+       
         [Test]
         public void Should_save_the_content_of_a_page_on_disk()
         {
+            var debut = new Commander();
+            debut.GetSave(args);
+            Assert.IsTrue(File.Exists(args[3].Replace("\"","/")));
         }
 
         [Test]
@@ -44,6 +42,8 @@ namespace Nurl.Test1
         {
         }
 
+
+        #region Test Argument Not Done
         [Test]
         [TestCase("get", "-url")]
         [TestCase("test","-url")]
@@ -60,13 +60,13 @@ namespace Nurl.Test1
         public void Should_add_key_and_value_in_dictionnary(string given1, string given2)
         {
             var comp = new Argument();
-
+            comp.AddArgumentCouple(given1, given2);
             Assert.IsNotNull(comp);
  
         }
 
 
-
+        #endregion
 
         #region Test Verification Done
         [Test]

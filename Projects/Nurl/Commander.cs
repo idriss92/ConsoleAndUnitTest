@@ -11,6 +11,9 @@ namespace Nurl
 {
     public class Commander : ICommander
     {
+
+        
+
         Verification verifie = new Verification();
 
         public void AfficherAide()
@@ -29,8 +32,9 @@ namespace Nurl
         /// </summary>
         /// <param name="arg">string [] args</param>
         /// <returns></returns>
-        public void Get(string[] args)
+        public string Get(string[] args)
         {
+            string codeHtml = string.Empty ;
             if (!String.IsNullOrEmpty(args[0]))
             {
                 IArgument iarg = new Argument();
@@ -42,10 +46,19 @@ namespace Nurl
 
                 using (WebClient client = new WebClient())
                 {
-                    string codeHtml = client.DownloadString(verifie.Normalisation(args[2]));
-                    Console.WriteLine(codeHtml);
+                    try
+                    {
+                        codeHtml = client.DownloadString(verifie.Normalisation(args[2]));
+                        Console.WriteLine(codeHtml);
+                    }
+
+                    catch
+                    {
+                        Console.WriteLine("Error");
+                    }
                 }
             }
+            return codeHtml;
         }
 
 
@@ -55,7 +68,6 @@ namespace Nurl
         /// </summary>
         /// <param name="arg">string[] sargs</param>
         /// <returns></returns>
-
         public void GetSave(string[] args)
         {
             if (!String.IsNullOrEmpty(args[0]))
@@ -71,14 +83,11 @@ namespace Nurl
                 IArgument iarg2 = new Argument();
                 iarg2.AddArgumentCouple(args[3], args[4]);
 
-                //flag
                 bool etat = false;
-                //vérification existence de chemin
                 if (!etat == verifie.IsDirectory(args[4]))
                 {
                     using (WebClient client = new WebClient())
                     {
-                        //string a = 
                         client.DownloadFile(verifie.Normalisation(args[2]), verifie.Normalisation(args[4]));
                     }
                 }
@@ -91,7 +100,6 @@ namespace Nurl
         /// </summary>
         /// <param name="arg"></param>
         /// <returns></returns>
-
         public void LoadTime(string[] args)
         {
             Stopwatch sw = new Stopwatch();
@@ -111,7 +119,7 @@ namespace Nurl
                     using (WebClient client = new WebClient())
                     {
                         string codeHtml = client.DownloadString(verifie.Normalisation(args[2]));
-                        Console.WriteLine(codeHtml);
+                        //Console.WriteLine(codeHtml);
                     }
                     sw.Stop();
                     Console.WriteLine(sw.ElapsedMilliseconds);
