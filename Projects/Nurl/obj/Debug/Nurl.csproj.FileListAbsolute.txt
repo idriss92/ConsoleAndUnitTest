@@ -10,11 +10,10 @@ C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl\bin\Debug\Nurl.pdb
 =======
 C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl\bin\Debug\Nurl.exe.manifest
 C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl\bin\Debug\Nurl.application
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl\bin\Debug\Nurl.exe
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl\bin\Debug\Nurl.pdb
 C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl\obj\Debug\Nurl.exe.manifest
 C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl\obj\Debug\Nurl.application
 >>>>>>> ba203b89503b953f14b383286774297f32c27f87
 C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl\obj\Debug\Nurl.exe
 C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl\obj\Debug\Nurl.pdb
 C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl\obj\Debug\Nurl.csprojResolveAssemblyReference.cache
+C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Projects\Nurl\obj\Debug\Nurl.TrustInfo.xml

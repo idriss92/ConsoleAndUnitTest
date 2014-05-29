@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Nurl.exe.manifest" size="3530">
+    <dependentAssembly dependencyType="install" codebase="Nurl.exe.manifest" size="4997">
       <assemblyIdentity name="Nurl.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4PZYb6gROGzUhD37543N4ORXfPMHRwWDE6NDq94fgWY=</dsig:DigestValue>
+        <dsig:DigestValue>effnXVQnFTGZ0eAzGt3H5S+wJ5cftoY81Ia3QHHTZuM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

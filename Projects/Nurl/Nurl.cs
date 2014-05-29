@@ -44,11 +44,7 @@ namespace Nurl
             {
                 Console.WriteLine("Aucun contenu dans le tableau argument");
             }
-<<<<<<< HEAD
             Console.ReadKey();
-=======
-            //Console.ReadKey();
->>>>>>> ba203b89503b953f14b383286774297f32c27f87
         }
     }
 }

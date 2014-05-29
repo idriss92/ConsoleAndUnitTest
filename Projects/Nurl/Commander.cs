@@ -1,11 +1,8 @@
 ﻿using System;
-<<<<<<< HEAD
-=======
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
->>>>>>> ba203b89503b953f14b383286774297f32c27f87
 using System.Net;
 using System.Diagnostics;
 using System.IO;
@@ -49,7 +46,6 @@ namespace Nurl
 
                 using (WebClient client = new WebClient())
                 {
-<<<<<<< HEAD
                     if (verifie.isUrL(args[2]))
                     {
                         try
@@ -62,17 +58,6 @@ namespace Nurl
                         {
                             Console.WriteLine("Error");
                         }
-=======
-                    try
-                    {
-                        codeHtml = client.DownloadString(verifie.Normalisation(args[2]));
-                        Console.WriteLine(codeHtml);
-                    }
-
-                    catch
-                    {
-                        Console.WriteLine("Error");
->>>>>>> ba203b89503b953f14b383286774297f32c27f87
                     }
                 }
             }
@@ -90,7 +75,6 @@ namespace Nurl
         {
             if (!String.IsNullOrEmpty(args[0]))
             {
-<<<<<<< HEAD
                 //IArgument iarg = new Argument();
                 //iarg.AddArgumentCouple(args[0], args[1]);
 
@@ -104,31 +88,12 @@ namespace Nurl
                 {
                     client.DownloadFile(args[2], args[4]);
                     //Console.Write("okokok");
-=======
-                IArgument iarg = new Argument();
-                //
-                
-                iarg.AddArgumentCouple(args[0], args[1]);
-
-                IArgument iarg1 = new Argument();
-                iarg1.AddArgumentCouple(args[1], args[2]);
-
-                IArgument iarg2 = new Argument();
-                iarg2.AddArgumentCouple(args[3], args[4]);
-
-                bool etat = false;
-                if (!etat == verifie.IsDirectory(args[4]))
-                {
-                    using (WebClient client = new WebClient())
-                    {
-                        client.DownloadFile(verifie.Normalisation(args[2]), verifie.Normalisation(args[4]));
-                    }
->>>>>>> ba203b89503b953f14b383286774297f32c27f87
                 }
             }
         }
+        
 
-<<<<<<< HEAD
+
         ////public void GetSave(string[] args)
         ////{
         ////    if (!String.IsNullOrEmpty(args[0]))
@@ -149,22 +114,15 @@ namespace Nurl
         ////        }
         ////    }
         ////}
-        /// <summary>
-        /// Teste le temps de chargement du ficher à l'url http://abc 5 fois et affiche les 5 temp
-        /// Commande d'execution nurl.exe test -url "http://abc" -times 5
-        /// </summary>
-        /// <param name="arg"></param>
-        /// <returns></returns>
-        public long LoadTime(string[] args)
-=======
+
         /// <summary>
         /// Teste le temps de chargement du ficher à l'url http://abc 5 fois et affiche les 5 temp
         /// nurl.exe test -url "http://abc" -times 5
         /// </summary>
         /// <param name="arg"></param>
         /// <returns></returns>
-        public void LoadTime(string[] args)
->>>>>>> ba203b89503b953f14b383286774297f32c27f87
+        public long LoadTime(string[] args)
+
         {
             Stopwatch sw = new Stopwatch();
             if (!String.IsNullOrEmpty(args[0]))
@@ -175,8 +133,8 @@ namespace Nurl
                 arg.AddArgumentCouple(args[0], args[1]);
                 arg1.AddArgumentCouple(args[1], args[2]);
                 arg2.AddArgumentCouple(args[3], args[4]);
-<<<<<<< HEAD
-                if (verifie.isUrL(verifie.Normalisation(args[2])))
+
+                if (verifie.isUrL(args[2]))
                 {
                     for (int i = 0; i < int.Parse(args[4]); i++)
                     {
@@ -202,41 +160,16 @@ namespace Nurl
                     Console.WriteLine("Mauvais lien");
                 }
             }
-
             return sw.ElapsedMilliseconds;
-=======
-
-                for (int i = 0; i <= int.Parse(args[4]); i++)
-                {
-                    sw.Reset();
-                    sw.Start();
-                    using (WebClient client = new WebClient())
-                    {
-                        string codeHtml = client.DownloadString(verifie.Normalisation(args[2]));
-                        //Console.WriteLine(codeHtml);
-                    }
-                    sw.Stop();
-                    Console.WriteLine(sw.ElapsedMilliseconds);
-                }
-            }
->>>>>>> ba203b89503b953f14b383286774297f32c27f87
         }
 
         /// <summary>
         /// Teste le temps de chargement du fichier à l'url http://abc et affiche la moyenne du temps de chargement
-<<<<<<< HEAD
-        ///  Commande d'execution : nurl.exe test -url "http://abc" -times 5 avg
+        ///  Commande d'execution : nurl.exe test -url "http://abc" -times 5 avg     
         /// </summary>
         /// <param name="arg"></param>
         /// <returns></returns> 
         public long LoadTimeAverage(string[] args)
-=======
-        ///  nurl.exe test -url "http://abc" -times 5 avg
-        /// </summary>
-        /// <param name="arg"></param>
-        /// <returns></returns> 
-        public void LoadTimeAverage(string[] args)
->>>>>>> ba203b89503b953f14b383286774297f32c27f87
         {
             IArgument arg = new Argument();
             IArgument arg1 = new Argument();
@@ -244,13 +177,10 @@ namespace Nurl
             arg.AddArgumentCouple(args[0], args[1]);
             arg1.AddArgumentCouple(args[1], args[2]);
             arg2.AddArgumentCouple(args[4], args[5]);
-
             Stopwatch sw = new Stopwatch();
             long mesure = 0;
             long avg = 0;
             bool etat = false;
-
-            
 
             if (!String.IsNullOrEmpty(args[0]))
             {
@@ -258,15 +188,11 @@ namespace Nurl
                 {
                     for (int i = 0; i <= int.Parse(args[4]); i++)
                     {
-                        sw.Reset();
-                        sw.Start();
+                        sw.Restart();
                         using (WebClient client = new WebClient())
                         {
-<<<<<<< HEAD
+
                             string codeHtml = client.DownloadString(args[2]);
-=======
-                            string codeHtml = client.DownloadString(verifie.Normalisation(args[2]));
->>>>>>> ba203b89503b953f14b383286774297f32c27f87
                         }
                         sw.Stop();
 
@@ -277,11 +203,8 @@ namespace Nurl
                 }
                 Console.WriteLine("Le temps moyen de chargement du fichier situé à " + args[2].ToString() + " est " + avg);
             }
-<<<<<<< HEAD
 
             return avg;
-=======
->>>>>>> ba203b89503b953f14b383286774297f32c27f87
         }
 
     }
