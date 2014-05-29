@@ -8,35 +8,38 @@ using System.Threading.Tasks;
 
 namespace Nurl
 {
+    /// <summary>
+    /// Implements IVérification Interface
+    /// </summary>
     public class Verification : IVerification
     {
 
         ///<summary>
-        ///Methode qui prend un string avec des cotes et enleve les codes
+        ///Erase the " of a string
         ///</summary>
-        ///<param name="arg></param>
-        ///<returns></returns>
+        ///<param name="url">Url as String</param>
+        ///<returns>A string without " </returns>
         public string Normalisation(string url)
         {
             return url.Trim(new Char[] { '"' });
         }
 
         /// <summary>
-        /// Vérifie si un string est un repertoire
+        /// Check if a string is a directory
         /// </summary>
-        /// <param name="directory"></param>
-        /// <returns></returns>
+        /// <param name="directory">Directory as string</param>
+        /// <returns>A boolean value</returns>
         public bool IsDirectory(string directory)
         {
             return Directory.Exists(Path.GetFullPath(directory));
         }
 
+
         /// <summary>
-        /// Verifier si la chaine est un url
+        /// Check url statement
         /// </summary>
         /// <param name="url"></param>
-        /// <returns></returns>
-        /// 
+        /// <returns>A boolean value</returns>
         public bool isUrL(string url)
         {
             WebRequest webRequest = WebRequest.Create(url);
@@ -52,10 +55,5 @@ namespace Nurl
             return true;
         }
 
-
-        //public void Replace (string chemin)
-        //{
-        //    chemin.Replace("\"", "/");
-        //}
     }
 }

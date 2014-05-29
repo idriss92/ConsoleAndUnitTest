@@ -7,12 +7,3 @@ C:\Users\SI\Documents\Visual Studio 2013\Projects\Nurl\Nurl.Test\bin\Debug\nunit
 C:\Users\SI\Documents\Visual Studio 2013\Projects\Nurl\Nurl.Test\obj\Debug\Nurl.Test.csprojResolveAssemblyReference.cache
 C:\Users\SI\Documents\Visual Studio 2013\Projects\Nurl\Nurl.Test\obj\Debug\Nurl.Test.dll
 C:\Users\SI\Documents\Visual Studio 2013\Projects\Nurl\Nurl.Test\obj\Debug\Nurl.Test.pdb
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Project\Nurl.Test\bin\Debug\Nurl.Test.dll
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Project\Nurl.Test\bin\Debug\Nurl.Test.pdb
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Project\Nurl.Test\bin\Debug\nunit.framework.dll
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Project\Nurl.Test\bin\Debug\Nurl.exe
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Project\Nurl.Test\bin\Debug\Nurl.pdb
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Project\Nurl.Test\bin\Debug\nunit.framework.xml
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Project\Nurl.Test\obj\Debug\Nurl.Test.csprojResolveAssemblyReference.cache
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Project\Nurl.Test\obj\Debug\Nurl.Test.dll
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Project\Nurl.Test\obj\Debug\Nurl.Test.pdb

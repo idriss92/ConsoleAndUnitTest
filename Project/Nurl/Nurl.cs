@@ -8,11 +8,15 @@ using System.Threading.Tasks;
 
 namespace Nurl
 {
+    /// <summary>
+    /// Point d'entrée d'application console avec execution en mode Debug
+    /// </summary>
     public class Nurl
     {
         static void Main(string[] args)
         {
             Commander consol = new Commander();
+            Argument argument = new Argument();
             if (args.Length > 0)
             {
                 string operateur = args[0];

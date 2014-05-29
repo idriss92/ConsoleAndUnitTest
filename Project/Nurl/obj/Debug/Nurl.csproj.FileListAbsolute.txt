@@ -3,6 +3,3 @@ C:\Users\SI\Documents\Visual Studio 2013\Projects\Nurl\Nurl\bin\Debug\Nurl.exe
 C:\Users\SI\Documents\Visual Studio 2013\Projects\Nurl\Nurl\bin\Debug\Nurl.pdb
 C:\Users\SI\Documents\Visual Studio 2013\Projects\Nurl\Nurl\obj\Debug\Nurl.exe
 C:\Users\SI\Documents\Visual Studio 2013\Projects\Nurl\Nurl\obj\Debug\Nurl.pdb
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Project\Nurl\bin\Debug\Nurl.exe.config
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Project\Nurl\obj\Debug\Nurl.exe
-C:\Users\SI\Documents\GitHub\ConsoleAndUnitTest\Project\Nurl\obj\Debug\Nurl.pdb

@@ -9,6 +9,9 @@ using System.IO;
 
 namespace Nurl
 {
+    /// <summary>
+    /// Implements ICommander Interface
+    /// </summary>
     public class Commander : ICommander
     {
 
@@ -16,6 +19,9 @@ namespace Nurl
 
         Verification verifie = new Verification();
 
+        /// <summary>
+        /// Helps for User
+        /// </summary>
         public void AfficherAide()
         {
             Console.WriteLine("Utilisez l'application de la manière suivante :");
@@ -27,11 +33,14 @@ namespace Nurl
         }
 
         /// <summary> 
-        /// afficher dans  la console le contenu du fichier situé à l'url abc
+        /// Show the code of a web page in the console
         /// nurl.exe get -url "http://abc"
         /// </summary>
-        /// <param name="arg">string [] args</param>
-        /// <returns></returns>
+        /// <para> How It works?
+        /// <code>Nurl.exe get -url "http://www.yahoo.fr"</code>
+        /// </para>
+        /// <param name="args">string [] args</param>
+        /// <returns>Code contents of the web page</returns>
         public string Get(string[] args)
         {
             string codeHtml = string.Empty;
@@ -66,11 +75,14 @@ namespace Nurl
 
 
         /// <summary>
-        /// Sauvegarde le contenu de l'url http://abc dans le fichier c:\abc.json:
+        /// Save the contents of the code of a web page on the disk
         /// nurl.exe get -url "http://abc" -save "c:\abc.json"
         /// </summary>
-        /// <param name="arg">string[] sargs</param>
-        /// <returns></returns>
+        /// <para> How It works?
+        /// <code>Nurl.exe get -url "http://www.yahoo.fr" -save "C\Users\Namespace\Documents\save.txt"</code>
+        /// </para>
+        /// <param name="args">Argument of cammand line as array</param>
+        /// <returns>Nothing</returns>
         public void GetSave(string[] args)
         {
             if (!String.IsNullOrEmpty(args[0]))
@@ -93,34 +105,14 @@ namespace Nurl
         }
 
 
-
-        ////public void GetSave(string[] args)
-        ////{
-        ////    if (!String.IsNullOrEmpty(args[0]))
-        ////    {
-        ////        using (WebClient client = new WebClient())
-        ////        {
-        ////            //Console.WriteLine(verifie.Normalisation(args[2]));
-        ////            //Console.WriteLine(verifie.Normalisation(args[4]));
-        ////            try
-        ////            {
-        ////                client.DownloadFile(verifie.Normalisation(args[2]), verifie.Normalisation(args[4]));
-        ////                Console.WriteLine(Path.GetFileName(args[4]));
-        ////            }
-        ////            catch
-        ////            {
-        ////                Console.WriteLine("Probleme");
-        ////            }
-        ////        }
-        ////    }
-        ////}
-
         /// <summary>
-        /// Teste le temps de chargement du ficher à l'url http://abc 5 fois et affiche les 5 temp
-        /// nurl.exe test -url "http://abc" -times 5
+        /// Check the load time of the showing content and Show the time
         /// </summary>
-        /// <param name="arg"></param>
-        /// <returns></returns>
+        /// <para> How It works?
+        /// <code>Nurl.exe test -url "http://www.yahoo.fr" -times 5 </code>
+        /// </para>
+        /// <param name="args">Argument of command line as a array</param>
+        /// <returns> A value of the load time of the content</returns>
         public long LoadTime(string[] args)
         {
             Stopwatch sw = new Stopwatch();
@@ -163,11 +155,13 @@ namespace Nurl
         }
 
         /// <summary>
-        /// Teste le temps de chargement du fichier à l'url http://abc et affiche la moyenne du temps de chargement
-        ///  Commande d'execution : nurl.exe test -url "http://abc" -times 5 avg     
+        /// Check the load time of the showing content and Show the average
         /// </summary>
-        /// <param name="arg"></param>
-        /// <returns></returns> 
+        /// <para> How It works?
+        /// <code>Nurl.exe test -url "http://www.yahoo.fr" -times 5 avg</code>
+        /// </para>
+        /// <param name="args">Argument of cammand line as array</param>
+        /// <returns>Return the average</returns> 
         public long LoadTimeAverage(string[] args)
         {
             IArgument arg = new Argument();
@@ -181,7 +175,9 @@ namespace Nurl
             long avg = 0;
             bool etat = false;
 
-            if (!String.IsNullOrEmpty(args[0]))
+     
+
+            if (!String.IsNullOrEmpty(args[0]) && args[3]=="-times")
             {
                 if (!etat == verifie.isUrL(args[2]))
                 {
