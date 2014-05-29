@@ -1,0 +1,6 @@
+C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl\bin\Release\Nurl.exe.config
+C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl\bin\Release\Nurl.exe
+C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl\bin\Release\Nurl.pdb
+C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl\obj\Release\Nurl.exe
+C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl\obj\Release\Nurl.pdb
+C:\Users\SI\Documents\GitHub\CSharpProjectsExercices\Projects\Nurl\obj\Release\Nurl.csprojResolveAssemblyReference.cache
