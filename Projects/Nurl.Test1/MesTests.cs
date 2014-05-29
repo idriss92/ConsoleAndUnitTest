@@ -2,7 +2,10 @@
 using Nurl;
 using NUnit.Framework;
 using System.IO;
+<<<<<<< HEAD
 using System.Net;
+=======
+>>>>>>> ba203b89503b953f14b383286774297f32c27f87
 //using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Nurl.Test1
@@ -10,15 +13,22 @@ namespace Nurl.Test1
     [TestFixture]
     public class MesTests
     {
+<<<<<<< HEAD
         Verification verifie = new Verification();
 
         string[] args = Environment.GetCommandLineArgs();
 
+=======
+        string[] args = Environment.GetCommandLineArgs();
+
+
+>>>>>>> ba203b89503b953f14b383286774297f32c27f87
         #region Test Commander Done
         [Test]
         //[TestCase("nurl.exe get -url 'http://api.openweathermap.org/data/2.5/weather?q=paris&units=metric'")]
         public void Should_show_the_content_of_a_page()
         {
+<<<<<<< HEAD
             var arg = new String[] { "get", "-url", "http://api.openweathermap.org/data/2.5/weather?q=paris&units=metric" };
             string recu = null;
             var contenu = new Commander();
@@ -26,10 +36,19 @@ namespace Nurl.Test1
             Assert.IsNotNull(recu);
         }
 
+=======
+            var contenu = new Commander();
+            var recu = contenu.Get(args);
+            Assert.IsNotNull(recu);
+        }
+
+        #endregion
+>>>>>>> ba203b89503b953f14b383286774297f32c27f87
        
         [Test]
         public void Should_save_the_content_of_a_page_on_disk()
         {
+<<<<<<< HEAD
             var arg = new String[] { "get", "-url", "http://api.openweathermap.org/data/2.5/weather?q=paris&units=metric", "-save ", @"C:\Users\SI\Documents\bitch.txt" };
             var debu = new Commander();
             debu.GetSave(arg);
@@ -61,10 +80,31 @@ namespace Nurl.Test1
 
         #endregion
 
+=======
+            var debut = new Commander();
+            debut.GetSave(args);
+            Assert.IsTrue(File.Exists(args[3].Replace("\"","/")));
+        }
+
+        [Test]
+        public void Should_test_the_load_of_the_content_of_a_page()
+        {
+        }
+
+        [Test]
+        public void Should_show_the_average_of_load_time_of_the_content_of_a_page()
+        {
+        }
+
+>>>>>>> ba203b89503b953f14b383286774297f32c27f87
 
         #region Test Argument Not Done
         [Test]
         [TestCase("get", "-url")]
+<<<<<<< HEAD
+=======
+        [TestCase("test","-url")]
+>>>>>>> ba203b89503b953f14b383286774297f32c27f87
         public void Should_test_dictionnary_couple(string given, string coming)
         {
             var com = new Argument();
@@ -88,7 +128,11 @@ namespace Nurl.Test1
 
         #region Test Verification Done
         [Test]
+<<<<<<< HEAD
         [TestCase("\"asdaze\"","asdaze")]
+=======
+        [TestCase("asdaze","asdaze")]
+>>>>>>> ba203b89503b953f14b383286774297f32c27f87
         public void Should_test_normalisation_method(string given,string coming)
         {
             var com = new Verification ();

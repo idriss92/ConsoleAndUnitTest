@@ -11,7 +11,11 @@
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+<<<<<<< HEAD
     <StartArguments>get -url "http://www.yahoo.fr" -save "C:\Users\SI\Documents\sa1.txt"</StartArguments>
+=======
+    <StartArguments>get -url "http://www.hotmail.com"  -save "C:\Users\SI\Documents\abcde.html"</StartArguments>
+>>>>>>> ba203b89503b953f14b383286774297f32c27f87
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <StartArguments>test -url "http://www.hotmail.com" -times 5 avg</StartArguments>

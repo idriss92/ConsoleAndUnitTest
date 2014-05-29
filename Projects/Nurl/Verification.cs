@@ -12,7 +12,11 @@ namespace Nurl
     {
 
         ///<summary>
+<<<<<<< HEAD
         ///Methode qui prend un string avec des cotes et enleve les cotes
+=======
+        ///Methode qui prend un string avec des cotes et enleve les codes
+>>>>>>> ba203b89503b953f14b383286774297f32c27f87
         ///</summary>
         ///<param name="arg></param>
         ///<returns></returns>
@@ -28,7 +32,18 @@ namespace Nurl
         /// <returns></returns>
         public bool IsDirectory(string directory)
         {
+<<<<<<< HEAD
             return Directory.Exists(Path.GetFullPath(this.Normalisation(directory)));
+=======
+            if (Directory.Exists(directory))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+>>>>>>> ba203b89503b953f14b383286774297f32c27f87
         }
 
         /// <summary>
@@ -52,9 +67,16 @@ namespace Nurl
             return true;
         }
 
+<<<<<<< HEAD
         public string Replace (string chemin)
         {
             return chemin.Replace("\"", "/");
         }
+=======
+        //public void Replace (string chemin)
+        //{
+        //    chemin.Replace("\"", "/");
+        //}
+>>>>>>> ba203b89503b953f14b383286774297f32c27f87
     }
 }
